@@ -199,3 +199,4 @@ function add_menu_link_class( $atts, $item, $args ) {
 
   
   wp_deregister_style('nk_opt-dynamic-css');
+  add_theme_support( 'post-thumbnails' );
