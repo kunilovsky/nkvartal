@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -10,25 +11,36 @@
  */
 
 ?>
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nk' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'nk' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'nk' ), 'nk', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
+<?php global $nk_opt; ?>
+<footer>
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-4 d-block d-lg-flex text-center text-lg-start">
+				<div class="footer__logo">
+					<img src="<?php echo $nk_opt["logo"]['url']; ?>" alt="logo"> <br>
+					<span><?php echo date('Y'); ?>. Все права защищены</span>
+				</div>
+				<div class="footer__company">
+					ИНН: 777777777 <br>
+					ОГРН: 123456789 <br>
+					<a href="#">Полные реквизиты</a>
+				</div>
+			</div>
+			<div class="col-lg-4 footer__private text-center pt-2 pb-2 pt-lg-0 pb-lg-0">
+				<a href="#">Политика конфиденциальности</a>
+			</div>
+			<div class="col-lg-4 footer__contact text-center text-lg-end">
+				<a href="tel:<?php echo $nk_opt['phone_main']; ?>"><?php echo $nk_opt['phone_main']; ?></a>
+				<a href=""><?php echo $nk_opt['adres_main']; ?></a>
+			</div>
+		</div>
+	</div>
+	<div class="text-center developer">
+		Developer Kunilovsky VA
+	</div>
+</footer>
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

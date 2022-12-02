@@ -32,8 +32,8 @@
 					<img src="<?php echo $nk_opt["logo"]['url']; ?>" alt="logo">
 				</a>
 				<div class="header-contact">
-					<a href="https://yandex.ru/maps/-/CCUjaGRpoA" target="_blank"> <i class="bi bi-pin-map-fill"></i> г. Тюмень, ул. 50 лет Октября, 57Б, кор.1</a>
-					<a href="tel:+79323267772"><i class="bi bi-telephone-forward"></i> 8 932 326 77 72</a>
+					<a href="https://yandex.ru/maps/-/CCUjaGRpoA" target="_blank"> <i class="bi bi-pin-map-fill"></i><?php echo $nk_opt['adres_main']; ?></a>
+					<a href="tel:<?php echo $nk_opt['phone_main']; ?>"><i class="bi bi-telephone-forward"></i> <?php echo $nk_opt['phone_main']; ?></a>
 				</div>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile" aria-controls="mobile" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
