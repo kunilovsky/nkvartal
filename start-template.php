@@ -3,13 +3,13 @@
 get_header();
 ?>
 <?php global $nk_opt; ?>
-<section class="history">
+<section class="history mt-0">
     <div class="container">
         <h2 class="sales">
             <i class="bi bi-fire"></i>
             Акции и новости
         </h2>
-        <div class="row pt-0 pt-lg-4">
+        <div class="row pt-1 pt-lg-4">
             <?php
             // в массиве задаем все необходимые параметры (более подробно о параметрах чуть ниже)
             $args = array(
@@ -41,7 +41,7 @@ get_header();
         </div>
     </div>
 </section>
-<section>
+<section class="mt-1">
     <div class="container">
         <h2>
             Продажа недвижимости в Тюмени
@@ -103,7 +103,7 @@ get_header();
         </div>
     </div>
 </section>
-<section>
+<section class="pt-lg-5">
     <div class="container">
         <h2>
             Услуги и сервис
@@ -164,7 +164,7 @@ get_header();
         </div>
     </div>
 </section>
-<section>
+<section class="pt-lg-5">
     <div class="container">
         <h2>
             О компании
@@ -184,27 +184,27 @@ get_header();
                     </span>
                 </div>
             </div>
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-6 text-center pt-lg-0 pb-lg-0 pt-4 pb-4">
                 <img src="<?php echo $nk_opt["logo"]['url']; ?>" alt="logo">
             </div>
         </div>
-        <div class="row align-items-center">
+        <div class="row align-items-center pt-lg-5 pt-5 text-lg-start text-center">
             <div class="col-lg-3 about__seo">
                 <img src="http://localhost:8888/wp-content/uploads/2022/12/avatar.png" alt="Foto">
             </div>
             <div class="col-lg-9  text-start">
-                <div class="about__quote">
+                <div class="about__quote mt-3 mt-lg-0">
                     <i class="bi bi-quote"></i>
                     Для того чтобы иметь честь, необходимо заниматься честной деятельностью
                 </div>
-                <h4>
+                <h4 class="pt-lg-4 pt-4 text-lg-start text-center">
                     Владимир Двойников
                 </h4>
-                <p>
+                <p class="pb-lg-3 pt-1 text-lg-start text-center" style="font-size: 12px;">
                     Основатель компании “Новый Квартал”
                     Эксперт в инвестициях, управлении жилой и коммерческой недвижимостью
                 </p>
-                <div class="about__seo-social">
+                <div class="about__seo-social text-lg-start text-center">
                     <a href="http://www.sutkivnovin.ru/" target="_blank"><i class="bi bi-globe2"></i></a>
                     <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
                     <a href="" target="_blank"><i class="bi bi-envelope-at"></i></a>
@@ -213,7 +213,7 @@ get_header();
         </div>
     </div>
 </section>
-<section>
+<section class="pt-lg-5">
     <div class="container">
         <h2>Контакты</h2>
         <div class="row pt-4">
@@ -231,8 +231,8 @@ get_header();
                     Форма связи
                 </button>
             </div>
-            <div class="col-lg-6">
-                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/55/tyumen/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Тюмень</a><a href="https://yandex.ru/maps/55/tyumen/house/ulitsa_50_let_oktyabrya_57bk1/YkwYcw5kTEcDQFttfX11cHtkbQ==/?ll=65.594524%2C57.141779&utm_medium=mapframe&utm_source=maps&z=16" style="color:#eee;font-size:12px;position:absolute;top:14px;">Агентсво Недвижимости "Новый Квартал"</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUjeKA0OB" width="560" height="250" frameborder="1" allowfullscreen="true" style="position:relative;border-radius:10px"></iframe></div>
+            <div class="col-lg-6 pt-5 pt-lg-0">
+                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/55/tyumen/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Тюмень</a><a href="https://yandex.ru/maps/55/tyumen/house/ulitsa_50_let_oktyabrya_57bk1/YkwYcw5kTEcDQFttfX11cHtkbQ==/?ll=65.594524%2C57.141779&utm_medium=mapframe&utm_source=maps&z=16" style="color:#eee;font-size:12px;position:absolute;top:14px;">Агентсво Недвижимости "Новый Квартал"</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUjeKA0OB" class="maps" frameborder="1" allowfullscreen="true" style="position:relative;border-radius:10px"></iframe></div>
             </div>
         </div>
     </div>

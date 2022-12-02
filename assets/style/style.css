@@ -89,7 +89,7 @@ header.inverted {
     max-width: 100px;
   }
   .header-contact {
-    max-width: 150px;
+    max-width: 180px;
   }
   .header-contact a {
     font-size: 8px;
@@ -168,10 +168,7 @@ section {
           box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.15);
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 22, 222, 0.6)), to(rgba(0, 22, 222, 0.6)));
   background: linear-gradient(0deg, rgba(0, 22, 222, 0.6), rgba(0, 22, 222, 0.6));
-  border: 3px solid #ffffff;
-  border-color: linear-gradient(154.71deg, #FF0E56 -1.94%, #39DBFF 108.01%);
-  -webkit-transition: .3s;
-  transition: .3s;
+  border: 4px solid #ffffff;
 }
 
 .stories:hover {
@@ -185,8 +182,8 @@ section {
   }
   .sales {
     font-size: 12px;
-    width: 60%;
-    padding: 8px 14px;
+    width: 50%;
+    padding: 8px 10px;
   }
   .sales__item {
     width: 90px;
@@ -350,8 +347,23 @@ section {
   color: #000000;
 }
 
+@media (max-width: 992px) {
+  .about__text {
+    font-size: 12px;
+  }
+  .about__quote {
+    font-size: 12px;
+  }
+}
+
+.maps {
+  width: 100%;
+  height: 250px;
+}
+
 /* Footer */
 footer {
+  margin-top: 100px;
   padding: 15px 0;
   background: #000000;
   color: #ffffff;
