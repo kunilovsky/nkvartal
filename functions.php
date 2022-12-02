@@ -138,17 +138,17 @@ add_action( 'widgets_init', 'nk_widgets_init' );
  * Enqueue scripts and styles.
  */
 function nk_scripts() {
-	wp_enqueue_style( 'nk-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'nk-style', 'rtl', 'replace' );
-
-	wp_enqueue_script( 'nk-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_style( 'nk-bootstrap5.2.3', get_template_directory_uri() . '/assets/style/bs.css' );
+	wp_enqueue_style( 'nk-compile-css', get_template_directory_uri() . '/assets/style/style.css' );
+	wp_enqueue_script( 'nk-navigation', get_template_directory_uri() . '/assets/js/bs.js' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'nk_scripts' );
-
+remove_action( 'wp_enqueue_scripts', 'extendify-gutenberg-patterns-and-templates-utilities-inline-css' );
+remove_action( 'wp_footer', 'extendify-gutenberg-patterns-and-templates-utilities-inline-css', 1 );
 /**
  * Implement the Custom Header feature.
  */
@@ -176,3 +176,26 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/* Redux Framework */
+// подключаем redux 
+require get_template_directory() . "/inc/option-theme.php";
+
+/* Custom */
+function add_additional_class_on_li($classes, $item, $args) {
+    if(isset($args->add_li_class)) {
+        $classes[] = $args->add_li_class;
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
+function add_menu_link_class( $atts, $item, $args ) {
+	if (property_exists($args, 'link_class')) {
+	  $atts['class'] = $args->link_class;
+	}
+	return $atts;
+  }
+  add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
+
+  
+  wp_deregister_style('nk_opt-dynamic-css');

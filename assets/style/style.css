@@ -1,0 +1,69 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Color */
+/* Global */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  font-size: 14px;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  font-size: 12px;
+}
+
+.bi {
+  padding-right: 5px;
+}
+
+/* Header */
+.navbar-brand img {
+  max-width: 200px;
+}
+
+.header-contact a {
+  font-size: 12px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="%236bc2cc" d="M22 18.005c0 .55-.446.995-.995.995h-8.01a.995.995 0 0 1 0-1.99h8.01c.55 0 .995.445.995.995ZM22 12c0 .55-.446.995-.995.995H2.995a.995.995 0 1 1 0-1.99h18.01c.55 0 .995.446.995.995Zm-.995-5.01a.995.995 0 0 0 0-1.99H8.995a.995.995 0 1 0 0 1.99h12.01Z"%2F%3E%3C%2Fsvg%3E');
+}
+
+.navbar-toggler {
+  border: none;
+  padding-right: 0;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .navbar-brand {
+    margin-right: 0;
+  }
+  .navbar-brand img {
+    max-width: 100px;
+  }
+  .header-contact {
+    max-width: 150px;
+  }
+  .header-contact a {
+    font-size: 8px;
+    padding: 2px 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

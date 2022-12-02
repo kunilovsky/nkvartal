@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -8,52 +9,49 @@
  *
  * @package nk
  */
-
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 	<?php wp_head(); ?>
 </head>
+<?php global $nk_opt; ?>
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'nk' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$nk_description = get_bloginfo( 'description', 'display' );
-			if ( $nk_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $nk_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'nk' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+<body style="background: linear-gradient(0deg, rgba(13, 13, 13, 0.9), rgba(13, 13, 13, 0.9)), url(<?php echo $nk_opt["bg-img"]['url']; ?>);" <?php body_class(); ?>>
+	<?php wp_body_open(); ?>
+	<header class="sticky-top">
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+				<a class="navbar-brand" href="#">
+					<img src="<?php echo $nk_opt["logo"]['url']; ?>" alt="logo">
+				</a>
+				<div class="header-contact">
+					<a href="https://yandex.ru/maps/-/CCUjaGRpoA" target="_blank"> <i class="bi bi-pin-map-fill"></i> г. Тюмень, ул. 50 лет Октября, 57Б, кор.1</a>
+					<a href="tel:+79323267772"><i class="bi bi-telephone-forward"></i> 8 932 326 77 72</a>
+				</div>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile" aria-controls="mobile" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mobile">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+							'container' => false,
+							'menu_class' => 'navbar-nav ms-auto mb-2 mb-lg-0',
+							'add_li_class' => 'nav-item',
+							'link_class' => 'nav-link'
+						)
+					);
+					?>
+				</div>
+			</div>
+		</nav>
+	</header>
