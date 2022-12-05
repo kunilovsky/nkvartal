@@ -28,7 +28,7 @@
 	<header class="sticky-top">
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="/">
 					<img src="<?php echo $nk_opt["logo"]['url']; ?>" alt="logo">
 				</a>
 				<div class="header-contact">

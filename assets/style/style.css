@@ -5,11 +5,15 @@ body {
 /* Color */
 /* Global */
 h1, h2, h3, h4, h5, h6 {
-  color: #6BC2CC;
+  color: #ffffff;
 }
 
 h2 {
   font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 @media (max-width: 992px) {
@@ -86,7 +90,7 @@ header.inverted {
     margin-right: 0;
   }
   .navbar-brand img {
-    max-width: 100px;
+    width: 60px;
   }
   .header-contact {
     max-width: 180px;
@@ -410,6 +414,173 @@ footer {
 @media (max-width: 992px) {
   .footer__logo span {
     padding-left: 0;
+  }
+}
+
+/* Other */
+.nav-links {
+  display: none;
+}
+
+/* POST template - Category Estate */
+.estate {
+  padding: 40px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px rgba(107, 194, 204, 0.1);
+          box-shadow: 0px 0px 20px rgba(107, 194, 204, 0.1);
+  border-radius: 10px;
+}
+
+.estate p, .estate h1, .estate h2 {
+  color: #1e1e1e;
+}
+
+.estate h1 {
+  font-weight: 700;
+}
+
+.estate__title {
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.estate__title__modal {
+  font-size: 16px;
+  color: #1e1e1e;
+}
+
+.estate__contact {
+  padding: 15px;
+  background: #ececec;
+  border-radius: 10px;
+}
+
+.estate__contact p {
+  font-weight: 600;
+  text-align: center;
+  font-size: 18px;
+}
+
+.estate__phone {
+  background: #1e1e1e;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 5px 12px;
+  border-radius: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.estate__phone:hover {
+  background: #6BC2CC;
+  color: #1e1e1e;
+}
+
+.estate__maps iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.estate__gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.estate__gallery-img {
+  padding: 5px;
+  width: 200px;
+}
+
+.estate__gallery-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.estate__data {
+  font-weight: 600;
+}
+
+.estate__next {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.estate__next img {
+  width: 100%;
+  height: auto;
+}
+
+.estate__card {
+  padding: 0;
+  background: #ffffff;
+  border-radius: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.estate__card:hover {
+  -webkit-filter: drop-shadow(0px 4px 10px rgba(107, 194, 204, 0.25));
+          filter: drop-shadow(0px 4px 10px rgba(107, 194, 204, 0.25));
+}
+
+.estate__card h3 {
+  color: #1e1e1e;
+}
+
+.estate__card-img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px 10px 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.estate__card-content {
+  padding: 15px;
+}
+
+.estate__card-price p {
+  font-weight: 700;
+  font-size: 20px;
+  color: #1e1e1e;
+}
+
+.entry-date {
+  color: #d2d2d2;
+  font-size: 12px;
+}
+
+.entry-header {
+  margin-bottom: 25px;
+}
+
+.modal-estate-gallery {
+  padding: 0;
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .estate {
+    padding: 15px;
+  }
+  .estate__title {
+    font-size: 20px;
+  }
+  .estate__gallery-img {
+    width: 50%;
+  }
+  .entry-date {
+    font-size: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

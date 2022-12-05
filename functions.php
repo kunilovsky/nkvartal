@@ -200,3 +200,6 @@ function add_menu_link_class( $atts, $item, $args ) {
   
   wp_deregister_style('nk_opt-dynamic-css');
   add_theme_support( 'post-thumbnails' );
+
+// add single types
+add_filter('single_template', create_function('$t', 'foreach( (array) get_the_category() as $cat) { if (file_exists(TEMPLATEPATH. "/single-{$cat->term_id}.php")) return TEMPLATEPATH. "/single-{$cat->term_id}.php"; } return $t;' ));
