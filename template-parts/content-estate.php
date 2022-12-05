@@ -110,9 +110,17 @@
 				<div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/55/tyumen/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Тюмень</a><a href="https://yandex.ru/maps/55/tyumen/house/ulitsa_50_let_oktyabrya_57a/YkwYcw5jQEEHQFttfX1yeHpjYQ==/?ll=65.593940%2C57.139605&utm_medium=mapframe&utm_source=maps&z=16.93" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица 50 лет Октября, 57А — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUjBKhVtB" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row tags p-2" style="font-size: 10px;">
 			<?php the_tags($before, $separator, $after); ?>
 		</div>
 
 	</article><!-- #post-<?php the_ID(); ?> -->
+	<button class="btn btn-after sticky-bottom" id="history-button">
+		<i class="bi bi-arrow-left"></i> К каталогу
+	</button>
+	<script>
+		document.getElementById('history-button').addEventListener('click', () => {
+			history.back();
+		});
+	</script>
 </div>

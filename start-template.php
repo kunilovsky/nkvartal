@@ -49,7 +49,7 @@ get_header();
         <div class="row pt-2 pt-lg-4">
             <div class="col-lg-2 col-4">
                 <div class="cat__item text-center">
-                    <a href="">
+                    <a href="<?php echo get_page_link('41'); ?>">
                         <img src="<?php the_field('cat_1'); ?>" alt="">
                         Новостройки
                     </a>
@@ -57,7 +57,7 @@ get_header();
             </div>
             <div class="col-lg-2 col-4">
                 <div class="cat__item text-center">
-                    <a href="">
+                    <a href="<?php echo get_page_link('41'); ?>">
                         <img src="<?php the_field('cat_2'); ?>" alt="">
                         Вторичное
                     </a>
@@ -65,7 +65,7 @@ get_header();
             </div>
             <div class="col-lg-2 col-4">
                 <div class="cat__item text-center">
-                    <a href="">
+                    <a href="<?php echo get_page_link('41'); ?>">
                         <img src="<?php the_field('cat_3'); ?>" alt="">
                         Дома
                     </a>
@@ -73,7 +73,7 @@ get_header();
             </div>
             <div class="col-lg-2 col-4">
                 <div class="cat__item text-center">
-                    <a href="">
+                    <a href="<?php echo get_page_link('41'); ?>">
                         <img src="<?php the_field('cat_4'); ?>" alt="">
                         Участки
                     </a>
@@ -81,7 +81,7 @@ get_header();
             </div>
             <div class="col-lg-2 col-4">
                 <div class="cat__item text-center">
-                    <a href="">
+                    <a href="<?php echo get_page_link('41'); ?>">
                         <img src="<?php the_field('cat_5'); ?>" alt="">
                         Паркинги
                     </a>
@@ -89,7 +89,7 @@ get_header();
             </div>
             <div class="col-lg-2 col-4">
                 <div class="cat__item text-center">
-                    <a href="">
+                    <a href="<?php echo get_page_link('41'); ?>">
                         <img src="<?php the_field('cat_6'); ?>" alt="">
                         Коммерческая
                     </a>
@@ -97,7 +97,7 @@ get_header();
             </div>
         </div>
         <div class="text-center pt-4">
-            <a href="" class="btn-link">
+            <a href="<?php echo get_page_link('41'); ?>" class="btn-link">
                 К каталогу
             </a>
         </div>
@@ -118,7 +118,7 @@ get_header();
                         <li>Обзор конкурентной среды. Анализ ключевых характеристик и тенденций на рынке</li>
                         <li>Мониторинг динамики спроса и предложения</li>
                         <li>Формирование портрета потребителя, включая все ключевые характеристики и др.</li>
-                        <a href="" class="usl__item-link">Подробнее</a>
+                        <a href="<?php echo get_page_link('130'); ?>" class="usl__item-link">Подробнее</a>
                     </ul>
                 </div>
             </div>
@@ -131,7 +131,7 @@ get_header();
                         <li>Формирование плана-графика реализации объекта</li>
                         <li>Разработка дизайн-проекта</li>
                         <li>Выбор подрядной бригады и др.</li>
-                        <a href="" class="usl__item-link">Подробнее</a>
+                        <a href="<?php echo get_page_link('134'); ?>" class="usl__item-link">Подробнее</a>
                     </ul>
                 </div>
             </div>
@@ -144,7 +144,7 @@ get_header();
                         <li>Авторский дизайн и визуализация</li>
                         <li>Выезд на замеры и изготовление согласно индивидуальным размерам</li>
                         <li>Техническая консультация и др.</li>
-                        <a href="" class="usl__item-link">Подробнее</a>
+                        <a href="<?php echo get_page_link('136'); ?>" class="usl__item-link">Подробнее</a>
                     </ul>
                 </div>
             </div>
@@ -157,7 +157,7 @@ get_header();
                         <li>Широкий спектор услуг в области права</li>
                         <li>Разрешение земельных, жилищных, семейных споров</li>
                         <li>Защита по гражданским делам в судах общей юрисдикции и др.</li>
-                        <a href="" class="usl__item-link">Подробнее</a>
+                        <a href="<?php echo get_page_link('138'); ?>" class="usl__item-link">Подробнее</a>
                     </ul>
                 </div>
             </div>

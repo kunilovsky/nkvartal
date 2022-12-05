@@ -1,5 +1,6 @@
 body {
   font-family: 'Inter', sans-serif;
+  position: relative;
 }
 
 /* Color */
@@ -14,11 +15,15 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
+  margin-bottom: 0;
 }
 
 @media (max-width: 992px) {
   h2 {
     font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.1rem;
   }
 }
 
@@ -422,6 +427,16 @@ footer {
   display: none;
 }
 
+.tags a {
+  width: auto;
+  background: #d2d2d2;
+  color: #1e1e1e;
+  border-radius: 2px;
+  padding: 1px 3px;
+  font-size: 10px;
+  margin-left: 5px;
+}
+
 /* POST template - Category Estate */
 .estate {
   padding: 40px;
@@ -489,6 +504,8 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
 }
 
 .estate__gallery-img {
@@ -546,10 +563,45 @@ footer {
   padding: 15px;
 }
 
+.estate__card-content h3 {
+  margin-bottom: 0;
+}
+
 .estate__card-price p {
   font-weight: 700;
   font-size: 20px;
   color: #1e1e1e;
+}
+
+.estate__filter {
+  padding-left: 0;
+}
+
+.estate__filter-item input {
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: #6BC2CC;
+  color: #ffffff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.estate__filter-item input:hover {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+.btn-after {
+  border-radius: 2px 2px 0 0;
+  background: #6BC2CC;
+  color: #ffffff;
+  bottom: -50px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.btn-after:hover {
+  background: #1e1e1e;
 }
 
 .entry-date {
@@ -569,6 +621,16 @@ footer {
   display: none;
 }
 
+.postform {
+  height: 40px;
+  background: #ffffff;
+  font-size: 16px;
+}
+
+.postform li {
+  height: 30px;
+}
+
 @media (max-width: 992px) {
   .estate {
     padding: 15px;
@@ -581,6 +643,58 @@ footer {
   }
   .entry-date {
     font-size: 10px;
+  }
+  .entry-content {
+    font-size: 14px;
+  }
+}
+
+/* Page Bilder */
+.page-auto {
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  color: #1e1e1e;
+}
+
+.page-auto__title h1 {
+  color: #1e1e1e;
+}
+
+.page-auto__text p {
+  color: #1e1e1e;
+}
+
+@media (max-width: 992px) {
+  .page-auto {
+    padding: 15px;
+  }
+}
+
+/* News */
+.news {
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.news__card-desc p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #1e1e1e;
+}
+
+.news__title {
+  color: #1e1e1e;
+}
+
+.news__text p {
+  color: #1e1e1e;
+}
+
+@media (max-width: 992px) {
+  .news {
+    padding: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */

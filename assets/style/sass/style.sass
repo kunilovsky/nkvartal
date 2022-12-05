@@ -1,5 +1,6 @@
 body
     font-family: 'Inter', sans-serif
+    position: relative
 /* Color */
 $white: #ffffff
 $grey: #d2d2d2
@@ -11,7 +12,7 @@ $dark: #000000
 $blue: #6BC2CC
 $red: #F33939
 $gradient: linear-gradient(180deg, #CC4141 0%, #1249B5 100%)
-$bg-block: #363636 
+$bg-block: #363636
 /* Global */
 h1, h2, h3, h4, h5, h6
     color: $white
@@ -19,9 +20,12 @@ h2
     font-size: 3rem
 h3
     font-size: 1.5rem
+    margin-bottom: 0
 @media (max-width: 992px)
     h2
         font-size: 1.6rem
+    h3
+        font-size: 1.1rem
 a
     text-decoration: none
 a:hover
@@ -281,6 +285,15 @@ footer
 /* Other */
 .nav-links
     display: none
+.tags a
+    width: auto
+    background: $grey
+    color: $black
+    border-radius: 2px
+    padding: 1px 3px
+    font-size: 10px
+    margin-left: 5px
+
 /* POST template - Category Estate */
 .estate
     padding: 40px
@@ -323,7 +336,9 @@ footer
     &__gallery
         display: flex
         flex-wrap: wrap
-    &__gallery-img 
+        margin-left: -5px
+        margin-right: -5px
+    &__gallery-img
         padding: 5px
         width: 200px
         & img
@@ -335,7 +350,7 @@ footer
     &__next
         font-size: 16px
         font-weight: 700
-    &__next img 
+    &__next img
         width: 100%
         height: auto
     &__card
@@ -356,11 +371,31 @@ footer
         background-position: center
     &__card-content
         padding: 15px
+        & h3
+            margin-bottom: 0
     &__card-price p
         font-weight: 700
         font-size: 20px
         color: $black
-
+    &__filter
+        padding-left: 0
+    &__filter-item input
+        padding: 5px 10px
+        border-radius: 4px
+        background: $blue
+        color: $white
+        transition: .3s
+        &:hover
+            background: $black
+            color: $white
+.btn-after
+    border-radius: 2px 2px 0 0
+    background: $blue
+    color: $white
+    bottom: -50px
+    transition: .3s
+    &:hover
+        background: $black
 .entry-date
     color: $grey
     font-size: 12px
@@ -370,7 +405,12 @@ footer
     padding: 0
 .wpcf7-spinner
     display: none
-
+.postform
+    height: 40px
+    background: $white
+    font-size: 16px
+    & li
+        height: 30px
 @media (max-width: 992px)
     .estate
         padding: 15px
@@ -380,4 +420,34 @@ footer
             width: 50%
     .entry-date
         font-size: 10px
-    
+    .entry-content
+        font-size: 14px
+/* Page Bilder */
+.page-auto
+    padding: 30px
+    background: $white
+    border-radius: 10px
+    color: $black
+    &__title h1
+        color: $black
+    &__text p
+        color: $black
+@media (max-width: 992px)
+    .page-auto
+        padding: 15px
+/* News */
+.news
+    padding: 30px
+    background: $white
+    border-radius: 10px
+    &__card-desc p
+        font-size: 14px
+        font-weight: 400
+        color: $black
+    &__title
+        color: $black
+    &__text p
+        color: $black
+@media (max-width: 992px)
+    .news
+        padding: 15px
